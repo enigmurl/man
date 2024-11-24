@@ -6,6 +6,7 @@
 
 ## references
 - [lldb to gdb](https://developer.apple.com/library/archive/documentation/General/Conceptual/lldb-guide/chapters/A3-GDB-Summary.html#//apple_ref/doc/uid/TP40016717-CH4-DontLinkElementID_29)
+- [lldb to gdb part 2](https://lldb.llvm.org/use/map.html)
 
 # gdb
 

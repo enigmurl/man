@@ -1,3 +1,10 @@
+# cmake
+
 # make
 
-# cmake
+
+Special Targets
+
+.PHONY: 
+
+.PRECIOUS:
