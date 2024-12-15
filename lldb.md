@@ -73,7 +73,7 @@ continue program
 c[ontinue]
 ```
 
-continue program until this function exist
+continue program until this function exits
 ```
 fin[ish] = thread step-out
 ```
@@ -101,7 +101,7 @@ q[uit]
 ### stack
 see thread backtrace
 ```
-th[read] backtrace [--count(c) count of frames to show] [--start(s) start index of frames]
+th[read] backtrace [--c[ount] count of frames to show] [--s[tart] start index of frames]
 bt {count of frames = inf}
 ```
 
@@ -156,6 +156,11 @@ create a lldb variable
     expr int $foo = 5
     // may be referenced as follows
     expr $foo + 3
+```
+
+print out a type
+```
+    image lookup -t {type name}
 ```
 
 Note: `p[rint]` is equal to `dwim-print --` and similar to `expr --`, with the difference being their behavior for void arguments
