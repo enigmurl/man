@@ -34,6 +34,7 @@ e.g. `\w{1, 2}` on `xy` matches `xy` but `\w{1, 2}?` on `xy` matches just `x`
 ## logic
 `|` matches the pattern to the left or right. Note that it has low precedence so xy|wz is (xy)|(wz)
 `(...)` matches a pattern and allows that pattern to be references as `\1` or `\2`... useful for replace
+`(?<name> ...)` named captured group. syntax varies for how to refer to it during replace.
 `(?: ...)` matches the pattern and does not capture it
 
 ## look ahead

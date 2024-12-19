@@ -766,7 +766,7 @@ break {location} thread {thread_id}
 
 display expression each time you stop
 ```
-    display {var_name}
+display {var_name}
 ```
 
 ### python scripting
@@ -843,16 +843,16 @@ sharedlibrary {library_name}
 ### loaded information
 list functions
 ```
-    info functions
-    info functions main
-    whatis main
+info functions
+info functions main
+whatis main
 ```
 
 list symbol at an address
 ```
-    info symbol 0x1000038ae
-    # show source line for address
-    info line *0x1000038ae
+info symbol 0x1000038ae
+# show source line for address
+info line *0x1000038ae
 ```
 
 ### configuration
