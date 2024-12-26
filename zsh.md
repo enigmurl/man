@@ -20,7 +20,7 @@ for ZSH
 `U=blah command` run command with `U` as environment variable
 
 Note the following about eager evaluation
-```
+```zsh
 B=0
 A=$B
 B=4
@@ -40,7 +40,7 @@ double quotes generally allow some forms of substitution, but word splitting is 
 - parameter expansion, command substitution and arithmetic substitution are whats allowed
 
 ## arrays
-```
+```zsh
 array=(element1 element2 element3)
 # access first element
 echo $array[1]
@@ -58,7 +58,7 @@ ${#array}
 ```
 
 expansion
-```
+```zsh
 array=("" apple cherry)
 
 function print() { echo $1 }
@@ -83,7 +83,7 @@ apple
 
 ## function
 
-```
+```zsh
 function name() {
     echo $1 $2 $3
     # local variable
@@ -98,7 +98,7 @@ name arg1 arg2 arg3
 ## control
 
 for
-```
+```zsh
 for x in 1 2 3
 do echo $x
 done
@@ -109,7 +109,7 @@ for ((i = 1; i < 4; i++)); do echo $i; done
 ```
 
 if
-```
+```zsh
 if listi1; then[;] listt1;
 [ elif listi2; then listt2; ]
 ...
@@ -121,7 +121,7 @@ if true; then
 fi
 ```
 while
-```
+```zsh
 while test; do somecommand; done
 
 while test
@@ -129,14 +129,14 @@ while test
 done
 ```
 select
-```
+```zsh
 select choice in $list; do
   echo $choice
 done
 ```
 
 switch statement
-```
+```zsh
 case word in
 [(] pattern1[|pattern2...]) [;] list ;;
 ...
@@ -163,7 +163,7 @@ highest binding is pipe `|` which connects output of left command to right. Stde
 
 `;` is lowest precedence and equivalent to a new line (executes next command regardless of success of previous)
 
-`$()` subshell (`expr` also works but is not recommended)
+`$()` subshell (`expr` also works but is not recommended), also referred to as command substitution
 
 `()` is simply a subprocess that only reports back the error code
 
@@ -200,14 +200,14 @@ highest binding is pipe `|` which connects output of left command to right. Stde
 [[ ]] is an alias of test command
 
 file operations
-```
+```zsh
 -e #  exists
 -f # is file
 -d # is directory
 ```
 
 string and arithmetic operations
-```
+```zsh
 == (left) string matches (right) pattern
 =~ string matches regex
 -eq numerical comparison
@@ -257,19 +257,19 @@ niche non posix modifiers
 ## jobs
 
 Run a job in the background
-```
+```zsh
 sleep 10 &
 ```
 
 put a job onto foreground, where we can reference an existing job with `%n`. 
-```
+```zsh
 fg [job]
 ```
 
 to put a process in the background, press control z
 
 list out running jobs with
-```
+```zsh
 jobs
 ```
 
@@ -282,7 +282,7 @@ control r lets you do history reverse search
 
 `!!` is the last command
 
-```
+```zsh
 brew install python
 # invalid perms..
 sudo !!
