@@ -94,31 +94,33 @@
 
 `unzip`
 
+`compress`
+
 `tar`
+
 
 # os related 
 
-`df`
+`df` (displays free space)
 
-`du`
+`du <path>` (disk utility)
+- '-H' for human readable
 
-`chmod`
+`chmod` (change permissions of a file)
 
-`chown`
+`chown` (change owner of a file)
 
-`umask`
+`umask` (default permissions of file)
 
-`strace` - view system calls
+`strace` (view system calls made by process)
 
-`mount` - view how file system is comprised
+`mount` (view how file system is comprised)
 
-`sudo` - do command as another user (typically root)
-- 
+`sudo <command>` - do command as another user (typically root)
 
-`uname` - prints details of the current system
+`uname` (prints details of the current system)
 
-`whoami` - prints the current user
-
+`whoami` (prints the current user)
 
 # monitoring
 
@@ -143,37 +145,37 @@
 
 # internet
 
-See owner of a domain
-`whois`
+`whois <domain>` (see owner of a domain)
 
-Lookup DNS records
+`nslookup <domain>` (lookup ip address)
 
-`ping`
+`ping <server>` (test latency of domain)
 
-`netstat`
+`netstat` (shows network status)
 
-`wget`
+`wget <url>` (download data from url)
 
-`curl `
+`curl <url>` (send http request)
+- `-X` specifies request type
+- `-H` specifies header field
+- `-d` specifies data
+- `-i` include response headers in output
 
-`nc`
+`nc` (netcat, general utility for working with tcp and udp connections)
 
-`scp`
+`scp` (transfer files from src to destination, possibly on remote machines)
 
-`ssh`
+`ssh` (execute arbitrary commands on remote machines)
 
 
 # other useful binaries
 
-`caffeinate` - macos
+`caffeinate` (macos; ensure system does not sleep)
 
-`binwalk`
-- search for embedded binaries
+`binwalk` (search for embedded binaries within an executable)
 
-`od`
-- octal display
+`od` (octal display)
 
-`xxd`, `bvi`
-- binary viewer editors
+`xxd`, `bvi` (binary viewer editors)
 
 
