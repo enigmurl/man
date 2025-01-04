@@ -37,7 +37,7 @@ Combines multiple object files into a static library.
 - `ar x libname.a`: Extract files from a library.
 
 # Linking
-Combines object files and libraries into an executable.
+Combines object files and libraries into an executable. Specifically, missing symbols are resolved using the symbol tables.
 
 ## `ld` (Linker)
 Links binary object files and resolves symbols. Use a linker script to explicitly specify how different sections should be positioned in the ELF/executable as well as in main memory once the program is loaded.

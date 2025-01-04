@@ -244,6 +244,8 @@ niche non posix modifiers
 `set -e` exits program upon any error
 
 ## special variables
+`$$` is the pid of the shell
+
 `$?` last return code
 
 `$@` is all of the arguments. Typically use `"$@"` to avoid
@@ -288,7 +290,7 @@ brew install python
 sudo !!
 ```
 
-`!<expr>` is similar to inline control r when you know for sure you'll get a match
+`!<expr>` is similar to inline control r where you only search for the command (no arguments)
 
 ## signals
 Use control c to send sig int

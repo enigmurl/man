@@ -11,13 +11,15 @@ dup2
 stat
 
 
+## cgroups / namespaces
+
 ## ipc
 
 ### domain sockets
 
 
 
-## memory layout
+## elf/memory layout
 
 - got
 - bss

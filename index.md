@@ -1,10 +1,12 @@
 # man 
 
 - [git](git.md)
-- [lldb](lldb.md)
+- [lldb/gdb/pwndbg](lldb.md)
+- [jetbrains](jetbrains.md)
 - [compiler](compiler.md)
-- [ctf](ctf.md)
 - [make](make.md)
+- [docker](docker.md)
 - [vim](vim.md)
 - [linux](linux.md)
 - [zsh](zsh.md)
+- [ctf](ctf.md)

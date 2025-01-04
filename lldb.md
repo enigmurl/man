@@ -400,6 +400,8 @@ register write {register} {value}
 disassemble some portion of the program. there are many options about which section you would like to disassemble exactly; see help disassemble
 ```
 disassemble
+disassemble --pc
+disassemble -n <name>
 ```
 
 ### scripting
@@ -420,9 +422,9 @@ we can store aliases and other common information in `~/.lldbinit`, which is loa
 
 find information about a symbol
 ```
-image lookup -r {regex}
+image lookup -r -n {regex} [filename]
 
-image lookup -n[ame] main
+image lookup -n[ame] main [filename]
 
 // example output:
 1 match found in /Users/manubhat/home/wormpool/cpp/a.out:
@@ -433,6 +435,7 @@ image lookup -n[ame] main
 find information about a symbol given address
 ```
 image lookup -a 0x1000038ae
+// --verbose gives unmangled name
 
 // example output
     Address: a.out[0x00000001000038ae] (a.out.__TEXT.__stubs + 600)
@@ -441,7 +444,7 @@ image lookup -a 0x1000038ae
 
 list shared libraries (and current executable)
 ```
-image list 
+image list [filename]
 ```
 
 list sections along with permissoins

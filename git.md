@@ -53,6 +53,8 @@ git tag
 
 git branch
 
+- moving a branch 
+
 ## specific actions
 
 Switch to a previous commit in a detached state
@@ -60,11 +62,34 @@ Switch to a previous commit in a detached state
     git switch -d <commit hash>
 ```
 
+get parents of a commit
+```
+    git log --pretty=%P -n 1 <commit hash>
+```
+
+git describe
+
 git grep
 
 git worktree add
 
 git filter-branch
+
+git apply
+
+
+delete remote branch
+
+## submodules
+
+
+## errors
+
+fatal: the remote end hung up unexpectedly
+```
+git config http.postBuffer 524288000
+```
+
 
 # references
 - [git debug](https://lucasoshiro.github.io/posts-en/2023-02-13-git-debug/)
