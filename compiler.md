@@ -27,6 +27,9 @@
 - `-D_FORTIFY_SOURCE=2` avoid buffer overflows
 - `-fsanitize=address,undefined` sanitizer options
 
+**Pragmas**:
+- `#pragma unroll `
+
 # Archiving
 Combines multiple object files into a static library.
 
@@ -108,6 +111,8 @@ symbol viewer for elf
 ```bash
 # list symbols
 nm file.o
+# list dynamic symbols
+nm -D file.o
 # only global symbols
 nm -g file.o
 # demangle symbols

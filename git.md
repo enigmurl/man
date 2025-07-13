@@ -1,5 +1,8 @@
 # git
 
+## commit messages
+
+
 ## concepts
 
 git dir vs working tree
@@ -11,6 +14,8 @@ head, merge_head
 pathspec
 
 commit-ish
+
+## configuration
 
 ## general actions
 
@@ -48,6 +53,13 @@ git reset
 git rm
 
 git stash
+-- https://stackoverflow.com/questions/10725729/see-whats-in-a-stash-without-applying-it
+
+git clone 
+- b flag 
+- --single-branch command
+
+`$#` is the number of argumente
 
 git tag
 
@@ -55,16 +67,33 @@ git branch
 
 - moving a branch 
 
+## git log
+
+get parents of a commit
+```
+    git log --pretty=%P -n 1 <commit hash>
+```
+
+
 ## specific actions
+
+finding commit that include some line 
+```
+git log -c -S'self.optimizer' experiment_toptagging.py
+```
+
+ammending commit
+
+squash commit
 
 Switch to a previous commit in a detached state
 ```
     git switch -d <commit hash>
 ```
 
-get parents of a commit
+get common ancestor of two commitish
 ```
-    git log --pretty=%P -n 1 <commit hash>
+git merge-base <c1> <c2>
 ```
 
 git describe
@@ -77,7 +106,6 @@ git filter-branch
 
 git apply
 
-
 delete remote branch
 
 ## submodules
@@ -85,7 +113,7 @@ delete remote branch
 
 ## errors
 
-fatal: the remote end hung up unexpectedly
+fatal: the remote end hung up unexpectedly (file size too large)
 ```
 git config http.postBuffer 524288000
 ```

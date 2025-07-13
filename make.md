@@ -52,6 +52,9 @@ hey: one two
 	# Outputs "hey", since this is the target name
 	echo $@
 
+    # outputs the stem (none here)
+    echo $*
+
 	# Outputs all prerequisites newer than the target
 	echo $?
 
@@ -148,7 +151,7 @@ endif
 
 # niche
 # search for the "-i" flag. MAKEFLAGS is just a list of single characters, one per flag. So look for "i" in this case.
-ifneq (,$(findstring i, $(MAKEFLAGS)))
+ifneq ($(findstring i, $(MAKEFLAGS)))
 	echo "i was passed to MAKEFLAGS"
 endif
 ```

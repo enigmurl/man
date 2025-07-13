@@ -10,6 +10,8 @@
 `\S` not whitespace
 `\b` word boundary, exactly one side is letter or digit or underscore (e.g. in `middle    earth`, four word boundaries)
 `\B` not a word boundary
+- for vim use `\<` and `\>`
+
 `.` matches any character (except line break?)
 
 `[x-y]` matches all characters in ascii range x to y, inclusive

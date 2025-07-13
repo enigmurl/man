@@ -1,12 +1,25 @@
 # zsh
 
+## specific actions
+
+print out full path of location
+```
+realpath <path>
+## or
+echo $(cd <path> && pwd)
+```
+
+
 ## path
 
-path is special variable that dictates search locations of commands
+`PATH` is special variable that dictates search locations of commands
+
 
 ## variables
 
 `U=blah` set U to be blah
+
+set the `IFS` variable to whatever separator we want (e.g. $'\n', default space, tab, newline and null)
 
 for BASH
 `${U}` or sometimes `$U` expands the contents of variable U, possibly into multiple words
@@ -17,6 +30,8 @@ for ZSH
 
 `export U=blah` export as envariable variable
 
+`unset U` remove U as a variable
+
 `U=blah command` run command with `U` as environment variable
 
 Note the following about eager evaluation
@@ -25,6 +40,12 @@ B=0
 A=$B
 B=4
 echo $A
+```
+
+Manual splitting
+```zsh
+# split on line feed
+${(f)"value"}
 ```
 
 Utilities for extracting basenames
@@ -179,6 +200,15 @@ highest binding is pipe `|` which connects output of left command to right. Stde
 
 
 ## redirection
+heredoc (reads multiline string until EOF is reached)
+```
+cat <<EOF 
+foo
+bar
+baz
+EOF
+```
+
 `expr < in_file` redirects in_file to input of expr
 
 `expr > out_file` redirects output of expr to out_file
@@ -248,6 +278,10 @@ niche non posix modifiers
 
 `$?` last return code
 
+`$!` last pid
+
+`$#` is the number of arguments
+
 `$@` is all of the arguments. Typically use `"$@"` to avoid
 
 `$1` is the first argument to the program or this function
@@ -273,6 +307,11 @@ to put a process in the background, press control z
 list out running jobs with
 ```zsh
 jobs
+```
+
+wait for all jobs with 
+```zsh 
+wait
 ```
 
 ## history

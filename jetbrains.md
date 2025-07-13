@@ -163,7 +163,7 @@ option enter - show context actions (e.g. show type explicitly)
 
 command d when selecting two or more files - show their difference
 
-select + option z + history = local history for selection
+(custom) select + option z + history = local history for selection
 
 command shift v - command paste from history
 
